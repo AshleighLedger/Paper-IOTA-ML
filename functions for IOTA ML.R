@@ -913,6 +913,14 @@ AUC.imp <- function(pred, outcome, imp, data){
   
 }
 
+
+###############################################################
+# Polytomous Calibration function R                           
+# Assessing calibration of multinomial risk prediction models 
+# Van Hoorde, K et al. Statistics in Medicine                
+# libraries vgam and bayesm are needed                        
+###############################################################
+
 Polcal <- function(outcome,k,p,LP,r=1,estimates=FALSE,dfr=2,plotoverall=TRUE,datapoints=TRUE,smoothing=TRUE,smoothpar=1,intercept=FALSE,slope=FALSE,test=FALSE){
   
   # NOTE: This function is written for a multinomial outcome with three categories.
